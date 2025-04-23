@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Astrophotography Gallery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panastro Gallery</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>My Astrophotography Gallery</h1>
-    </header>
+  <div id="starfield"></div>
 
-    <main class="gallery">
-        <!-- Add your images below -->
-        <a href="photos/photo1.jpg" target="_blank">
-            <img src="photos/photo1.jpg" alt="Astro Photo 1">
-        </a>
-        <a href="photos/photo2.jpg" target="_blank">
-            <img src="photos/photo2.jpg" alt="Astro Photo 2">
-        </a>
-        <a href="photos/photo3.jpg" target="_blank">
-            <img src="photos/photo3.jpg" alt="Astro Photo 3">
-        </a>
-        <!-- Keep adding more photos like above -->
-    </main>
+  <header>
+    <h1>Panastro Astrophotography</h1>
+    <p>Captured moments from the cosmos</p>
+  </header>
 
-    <footer>
-        <p>© 2025 Your Name</p>
-    </footer>
+  <main class="gallery">
+    <!-- Just duplicate this block for more photos -->
+    <a href="photos/photo1.jpg" class="lightbox">
+      <img src="photos/photo1.jpg" alt="Astro Photo 1">
+    </a>
+    <a href="photos/photo2.jpg" class="lightbox">
+      <img src="photos/photo2.jpg" alt="Astro Photo 2">
+    </a>
+    <a href="photos/photo3.jpg" class="lightbox">
+      <img src="photos/photo3.jpg" alt="Astro Photo 3">
+    </a>
+  </main>
+
+  <footer>
+    <p>© 2025 Panastro</p>
+  </footer>
+
+  <div id="lightbox-modal" class="hidden">
+    <img id="lightbox-img" src="" alt="Full Image"/>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
