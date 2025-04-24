@@ -12,18 +12,19 @@
   <header>
     <h1>Panastro Astrophotography</h1>
     <p>Captured moments from the cosmos</p>
+    <p class="instruction">Click on any image to enter the gallery</p>
   </header>
 
   <main class="gallery">
-    <!-- Just duplicate this block for more photos -->
-    <a href="photos/photo1.jpg" class="lightbox">
-      <img src="photos/photo1.jpg" alt="Astro Photo 1">
+    <!-- Thumbnails with full-res links -->
+    <a href="photos/photo1-full.jpg" class="lightbox">
+      <img src="photos/photo1-thumb.jpg" alt="Astro Photo 1">
     </a>
-    <a href="photos/photo2.jpg" class="lightbox">
-      <img src="photos/photo2.jpg" alt="Astro Photo 2">
+    <a href="photos/photo2-full.jpg" class="lightbox">
+      <img src="photos/photo2-thumb.jpg" alt="Astro Photo 2">
     </a>
-    <a href="photos/photo3.jpg" class="lightbox">
-      <img src="photos/photo3.jpg" alt="Astro Photo 3">
+    <a href="photos/photo3-full.jpg" class="lightbox">
+      <img src="photos/photo3-thumb.jpg" alt="Astro Photo 3">
     </a>
   </main>
 
@@ -32,7 +33,11 @@
   </footer>
 
   <div id="lightbox-modal" class="hidden">
+    <span class="close">&times;</span>
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
     <img id="lightbox-img" src="" alt="Full Image"/>
+    <div id="caption"></div>
   </div>
 
   <script src="script.js"></script>
