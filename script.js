@@ -31,18 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
     caption.textContent = images[currentIndex].alt;
   }
 
-  // Navigation controls
+  // Close modal
   closeBtn.addEventListener('click', () => {
     modal.classList.add('hidden');
     document.body.style.overflow = 'auto';
   });
 
+  // Previous image
   prevBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateLightbox();
   });
 
+  // Next image
   nextBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     currentIndex = (currentIndex + 1) % images.length;
@@ -73,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('mousemove', (e) => {
     const x = (e.clientX / window.innerWidth - 0.5) * 40;
     const y = (e.clientY / window.innerHeight - 0.5) * 40;
-    document.getElementById('starfield').style.transform = 
+    document.getElementById('starfield').style.transform =
       `translate3d(${x}px, ${y}px, 0)`;
   });
 });
