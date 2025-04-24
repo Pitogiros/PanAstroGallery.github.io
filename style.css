@@ -88,8 +88,8 @@ footer {
 }
 
 #lightbox-modal img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 95%;
+  max-height: 95%;
   border: 3px solid #fff;
   border-radius: 8px;
   object-fit: contain;
