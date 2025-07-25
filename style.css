@@ -1,8 +1,13 @@
 /* Base dark mode theme */
 body {
   margin: 0;
+  height: 100vh;
   background-color: #000;
+  background: url('assets/stars-bg.png') no-repeat center center fixed;
   color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   font-family: 'Segoe UI', sans-serif;
   overflow-x: hidden;
   perspective: 1000px;
