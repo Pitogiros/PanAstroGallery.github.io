@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- GLightbox CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Panastro Gallery</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-  <!-- GLightbox JS -->
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script>
-  const lightbox = GLightbox({
-    touchNavigation: true,
-    loop: true,
-    zoomable: true,
-    draggable: true
-  });
-</script>
 
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+</head>
 <body>
 
   <div id="starfield"></div>
@@ -30,14 +20,14 @@
   </header>
 
   <main class="gallery">
-    <!-- Thumbnail grid -->
-    <a href="photos/photo1-full.jpg" class="lightbox">
-      <img src="photos/photo1-thumb.jpg" alt="Comet  A3 (Tsuchinshan-ATLAS)">
+    <!-- Thumbnail grid using GLightbox -->
+    <a href="photos/photo1-full.jpg" class="glightbox" data-gallery="astro-gallery">
+      <img src="photos/photo1-thumb.jpg" alt="Comet A3 (Tsuchinshan-ATLAS)">
     </a>
-    <a href="photos/photo2-full.jpg" class="lightbox">
+    <a href="photos/photo2-full.jpg" class="glightbox" data-gallery="astro-gallery">
       <img src="photos/photo2-thumb.jpg" alt="Orion Nebula">
     </a>
-    <a href="photos/photo3-full.jpg" class="lightbox">
+    <a href="photos/photo3-full.jpg" class="glightbox" data-gallery="astro-gallery">
       <img src="photos/photo3-thumb.jpg" alt="Milky Way Core">
     </a>
     <!-- Add more images as needed -->
@@ -47,15 +37,17 @@
     <p>© 2025 PanAstro</p>
   </footer>
 
-  <!-- Enhanced Lightbox -->
-  <div id="lightbox-modal" class="hidden">
-    <span class="close">&times;</span>
-    <span class="prev">&#10094;</span>
-    <span class="next">&#10095;</span>
-    <img id="lightbox-img" src="" alt="Full Image"/>
-    <div id="caption"></div>
-  </div>
-
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      zoomable: true,
+      draggable: true
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
